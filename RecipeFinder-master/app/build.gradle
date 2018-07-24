@@ -1,0 +1,85 @@
+apply plugin: 'com.android.application'
+//apply plugin: 'com.neenbedankt.android-apt'
+
+android {
+    compileSdkVersion 23
+    buildToolsVersion '26.0.2'
+
+
+    repositories {
+        mavenCentral()
+        jcenter()
+    }
+
+    dataBinding {
+        enabled true
+    }
+    dexOptions {
+        incremental true
+    }
+
+    defaultConfig {
+    //    multiDexEnabled true
+        applicationId "com.example.guest.recipefinder"
+        minSdkVersion 15
+        targetSdkVersion 23
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+
+    packagingOptions {
+        exclude 'META-INF/DEPENDENCIES.txt'
+        exclude 'META-INF/DEPENDENCIES'
+        exclude 'META-INF/dependencies.txt'
+        exclude 'META-INF/LICENSE.txt'
+        exclude 'META-INF/LICENSE'
+        exclude 'META-INF/license.txt'
+        exclude 'META-INF/LGPL2.1'
+        exclude 'META-INF/NOTICE.txt'
+        exclude 'META-INF/NOTICE'
+        exclude 'META-INF/notice.txt'
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    buildTypes.each {
+        it.buildConfigField 'String', 'APP_KEY', AppKey
+        it.buildConfigField 'String', 'APP_ID', AppId
+        it.buildConfigField 'String', 'FIREBASE_ROOT_URL', FirebaseRootUrl
+    }
+}
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2') {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    }
+    androidTestCompile('com.android.support.test:runner:0.3') {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    }
+    //noinspection GradleCompatible
+    implementation 'com.android.support:appcompat-v7:23.2.1'
+    implementation 'com.jakewharton:butterknife:7.0.1'
+    implementation 'com.squareup.okhttp3:okhttp:3.2.0'
+    implementation 'com.android.support:recyclerview-v7:23.2.1'
+    implementation 'com.squareup.picasso:picasso:2.5.2'
+    implementation 'com.android.support:support-v4:23.2.1'
+    implementation 'org.parceler:parceler-api:1.1.1'
+    implementation 'com.firebase:firebase-client-android:2.3.1'
+  //  implementation 'com.android.support:multidex:1.0.3'
+    implementation 'com.android.support.constraint:constraint-layout:1.0.2'
+    implementation 'com.android.support:design:23.2.1'
+    implementation 'com.android.support:cardview-v7:23.2.1'
+    implementation 'com.jakewharton:butterknife:8.7.0'
+    annotationProcessor 'com.jakewharton:butterknife-compiler:8.7.0'
+    androidTestImplementation 'junit:junit:4.12'
+    androidTestImplementation 'org.robolectric:robolectric:3.0'
+    androidTestImplementation 'org.robolectric:shadows-support-v4:3.0'
+    annotationProcessor 'org.parceler:parceler:1.1.1'
+}

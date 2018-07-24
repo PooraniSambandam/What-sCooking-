@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.MainActivity">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/mainImageView"
+        android:scaleType="centerCrop"
+        android:src="@drawable/vegetablebasket" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/intro_text"
+        android:id="@+id/introTextView"
+        android:background="@color/colorPrimaryDark"
+        android:textSize="20sp"
+        android:textAlignment="center"
+        android:padding="10dp"
+        android:textColor="@color/colorTextIcons" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/ingredient1EditText"
+        android:hint="@string/enter_hint"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        android:background="@color/colorTextIcons"
+        android:textSize="25sp"
+        android:padding="5dp"
+        android:autoText="false" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Find Recipes"
+        android:id="@+id/findRecipesButton"
+        android:visibility="visible"
+        android:background="@color/colorAccent"
+        android:textColor="@color/colorTextIcons"
+        android:textSize="20sp"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <ImageButton
+        android:id="@+id/imageButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/findRecipesButton"
+        android:layout_centerHorizontal="true"
+        android:onClick="onClick"
+        app:srcCompat="@drawable/speak1" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/introTextView"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="67dp"
+        android:text="TextView" />
+
+
+</RelativeLayout>

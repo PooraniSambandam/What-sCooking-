@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">RecipeFinder</string>
+    <string name="enter_hint">Enter an ingredient</string>
+    <string name="intro_text">Find recipes using what you have in your kitchen</string>
+    <string name="balanced">Balanced</string>
+    <string name="high_protein">High Protein</string>
+    <string name="high_fibre">High Fibre</string>
+    <string name="low_fat">Low Fat</string>
+    <string name="low_carb">Low Carb</string>
+    <string name="low_sodium">Low Sodium</string>
+    <string name="radio_label1">Diet</string>
+    <string name="radio_label2">Health</string>
+    <string name="peanut">Peanut-free</string>
+    <string name="tree_nut">Tree-nut</string>
+    <string name="soy">Soy-free</string>
+    <string name="fish">Fish-free</string>
+    <string name="shellfish">Shellfish-free</string>
+    <string name="calLabel">Calories</string>
+
+</resources>

@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:padding="10dp"
+    tools:context=".ui.MainActivity">
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/intro_text"
+        android:id="@+id/introTextView"
+        android:background="@color/colorPrimaryDark"
+        android:textSize="20sp"
+        android:textAlignment="center"
+        android:padding="10dp"
+        android:textColor="@color/colorTextIcons" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:orientation="vertical"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp" >
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp">
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:id="@+id/ingredient1EditText"
+                android:hint="@string/enter_hint"
+                />
+        </android.support.design.widget.TextInputLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="20dp">
+            <TextView
+                android:paddingRight="15dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/radio_label1"
+                android:id="@+id/radioLabel1"
+                android:textSize="20dp"/>
+            <RadioGroup
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/radioLabel1"
+                android:orientation="vertical"
+                >
+                <RadioButton
+                    android:id="@+id/balanced"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/balanced"
+                    android:onClick="onRadioButtonClicked"/>
+                <RadioButton
+                    android:id="@+id/high_protein"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/high_protein"
+                    android:onClick="onRadioButtonClicked"
+                    />
+                <RadioButton
+                    android:id="@+id/high_fibre"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/high_fibre"
+                    android:onClick="onRadioButtonClicked"
+                    />
+            <RadioButton android:id="@+id/low_fat"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/low_fat"
+                android:onClick="onRadioButtonClicked"/>
+
+            <RadioButton android:id="@+id/low_carb"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/low_carb"
+                android:onClick="onRadioButtonClicked"/>
+            <RadioButton android:id="@+id/low_sodium"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/low_sodium"
+                android:onClick="onRadioButtonClicked"/>
+            </RadioGroup>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="20dp">
+            <TextView
+                android:paddingRight="15dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/radio_label2"
+                android:id="@+id/radioLabel2"
+                android:textSize="20dp"/>
+
+            <RadioGroup
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/radioLabel2"
+            android:orientation="vertical"
+            >
+            <RadioButton android:id="@+id/peanut"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/peanut"
+                android:onClick="onRadioButtonClicked1"/>
+            <RadioButton android:id="@+id/tree_nut"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/tree_nut"
+                android:onClick="onRadioButtonClicked1"/>
+            <RadioButton android:id="@+id/soy"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/soy"
+                android:onClick="onRadioButtonClicked1"/>
+            <RadioButton android:id="@+id/fish"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/fish"
+                android:onClick="onRadioButtonClicked1"/>
+
+            <RadioButton android:id="@+id/shellfish"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/shellfish"
+                android:onClick="onRadioButtonClicked1"/>
+        </RadioGroup>
+    </RelativeLayout>
+
+        <!--
+        <RelativeLayout android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="20dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:paddingRight="15dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/calLabel"
+                android:id="@+id/calLabel"
+                android:textSize="20dp"/>
+
+
+            <android.support.design.widget.TextInputLayout
+          android:layout_width="100px"
+          android:layout_height="wrap_content"
+          android:layout_toRightOf="@+id/calLabel"
+          android:layout_marginTop="10dp">
+
+        <EditText
+            android:layout_width="100px"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:id="@+id/calFromEditText"
+            android:hint="From"
+            />
+    </android.support.design.widget.TextInputLayout>
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="200px"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp">
+
+                <EditText
+                    android:layout_width="200px"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/calFromEditText"
+                    android:ems="10"
+                    android:id="@+id/calToEditText"
+                    android:hint="To"
+                    />
+            </android.support.design.widget.TextInputLayout>
+        </RelativeLayout>
+        -->
+        <Button
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="Find Recipes"
+            android:id="@+id/findRecipesButton"
+            android:visibility="visible"
+            android:background="@color/colorPrimaryDark"
+            android:layout_marginTop="40dp"
+            android:textColor="@android:color/white"/>
+    </LinearLayout>
+
+</LinearLayout>
